@@ -1,4 +1,6 @@
 export const hexToBytes = (hex: string): Uint8Array => {
+    if(!hex) return new Uint8Array(0);
+    
     let bytes: Uint8Array = new Uint8Array(Math.ceil(hex.length / 2));
     for (let c = 0; c < hex.length; c += 2)
         bytes[c / 2] = parseInt(hex.substring(c, c+2), 16);
@@ -7,6 +9,8 @@ export const hexToBytes = (hex: string): Uint8Array => {
 };
 
 export const bytesToHex = (bytes: Uint8Array): string => {
+    if(!bytes) return "";
+
     let hex = "";
     for (const b of bytes)
         hex += b.toString(16).padStart(2, "0");

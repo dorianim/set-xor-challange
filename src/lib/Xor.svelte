@@ -38,11 +38,13 @@
     <div class="grid lg:grid-cols-2 grid-cols-1 gap-3">
         <Input
             type="text"
+            clearable
             bind:value={input1}
             placeholder="Enter the first value here"
         />
         <Input
             type="text"
+            clearable
             bind:value={input2}
             placeholder="Enter the second value here"
         />

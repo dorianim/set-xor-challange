@@ -51,6 +51,7 @@
     <div class="grid lg:grid-cols-2 grid-cols-1 gap-3">
         <Input
             type="text"
+            clearable
             bind:value={input}
             placeholder={inputIsAscii ? "Enter ASCII here" : "Enter HEX here"}
         />
