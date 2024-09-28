@@ -6,7 +6,7 @@
     <Heading tag="h2">Notepad</Heading>
     <Textarea
         id="textarea-id"
-        placeholder="Your message"
+        placeholder="Your notes"
         rows="4"
         name="message"
     />
