@@ -16,8 +16,8 @@ This is a simple challenge to demonstrate XOR encryption. Students get the follo
 >  
 > **Exercise one (2 points): Decrypt the message to find out your login credentials!**  
 >  
-> Due to a mail server breach, some encrypted credentials, together with the corresponding email addresses, were leaked. You noticed that this leak also contained the email address of one of your professors.  
-> The leaked encrypted credentials of your professor are (hex encoded):  
+> A mail server security flaw allowed you to read your professor's emails! One of these emails contained his encrypted credentials. However, you don't have access to his decryption key. Can you still find his username and password? 
+> The leaked encrypted email to one of your professors is (hex encoded): 
 > ```
 > 26121516411a08000d0556321d06550811050055410a1f43
 > 1c13091741130b445f0d19014703471f0f1d0259030c1515
