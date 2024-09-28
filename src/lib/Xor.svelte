@@ -31,7 +31,7 @@
 <div class="flex flex-col gap-3">
     <Heading tag="h2">XOR calculator</Heading>
     <P>
-        This calculator can be used to calculate bytewise XOR on two HEX encoded
+        This calculator can be used to calculate bitwise XOR on two HEX encoded
         values. It outputs a hex encoded value.
     </P>
 
