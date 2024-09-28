@@ -18,8 +18,8 @@
 
         {#if value[1].length > 48}
 
-        <ValueOutputWithCopy class="!py-2 !pr-2 !rounded-b-none" value={value[1].substring(0,48)} />
-        <ValueOutputWithCopy  class="!py-2 !pr-2 mt-[-1rem] !rounded-t-none" value={value[1].substring(value[1].length-48)} />
+        <ValueOutputWithCopy class="!rounded-b-none z-20" value={value[1].substring(0,48)} />
+        <ValueOutputWithCopy  class="mt-[-1rem] !rounded-t-none z-10" value={value[1].substring(value[1].length-48)} />
         {:else}
 
         <ValueOutputWithCopy value={value[1].substring(0,48)} />

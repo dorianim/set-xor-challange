@@ -6,7 +6,7 @@ import Xor from './lib/Xor.svelte';
     import Notepad from "./lib/Notepad.svelte";
 </script>
 
-<main class="container mx-auto p-8 lg:pt-12 flex flex-col gap-8">
+<main class="container mx-auto p-4 lg:pt-12 flex flex-col gap-8">
   <HexToAscii></HexToAscii>
   <Xor></Xor>
   <Notepad></Notepad>
