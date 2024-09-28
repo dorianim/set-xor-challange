@@ -23,7 +23,7 @@
     {#if value.length !== 0}
         <ToolbarButton
             on:click={() => copyText(value)}
-            class="ms-auto my-0 p-3"
+            class="ms-auto my-0 p-1 m-2"
         >
             <FileCopyOutline></FileCopyOutline>
         </ToolbarButton>
