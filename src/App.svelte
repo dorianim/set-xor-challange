@@ -4,6 +4,7 @@
   import Xor from "./lib/Xor.svelte";
   import UsefulValues from "./lib/UsefulValues.svelte";
   import Notepad from "./lib/Notepad.svelte";
+  import Footer from "./lib/Footer.svelte";
 </script>
 
 <main class="container mx-auto p-4 lg:pt-12 flex flex-col gap-8">
@@ -11,4 +12,5 @@
   <Xor></Xor>
   <Notepad></Notepad>
   <UsefulValues></UsefulValues>
+  <Footer></Footer>
 </main>
