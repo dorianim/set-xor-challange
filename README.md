@@ -2,7 +2,7 @@
 
 This is a simple challenge to demonstrate XOR encryption. Students get the following exercise:
 
-> For the new semester, the TUM security office sends new login credentials to each student and staff member. Since these credentials are very sensitive, they are encrypted using a 24-byte-long pre-shared key. Your key is (encoded as hexadecimal) "797762396669796332326D6F6465356961763978726C6464". The message that contains your credentials is 48 bytes long. To decrypt it, you need to split it into two 24-byte halves and apply the bytewise xor operator to each byte of the message and the key.  
+> For the new semester, the TUM security office sends new login credentials to each student and staff member. Since these credentials are very sensitive, they are encrypted using a 24-byte-long pre-shared key. Your key is (encoded as hexadecimal) `797762396669796332326D6F6465356961763978726C6464`. The message that contains your credentials is 48 bytes long. To decrypt it, you need to split it into two 24-byte halves and apply the bytewise xor operator to each byte of the message and the key.  
 > The message you got from the TUM security office is (hex encoded):
 > ```
 > 301f105c46071c16575c4d351102540706055d1906090a44
