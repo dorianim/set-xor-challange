@@ -1,11 +1,7 @@
 <script lang="ts">
 import "./app.postcss";
-import svelteLogo from './assets/svelte.svg'
-import viteLogo from '/vite.svg'
-import Counter from './lib/Counter.svelte'
 import HexToAscii from './lib/HexToAscii.svelte';
 import Xor from './lib/Xor.svelte';
-import {Alert} from 'flowbite-svelte';
     import UsefulValues from "./lib/UsefulValues.svelte";
     import Notepad from "./lib/Notepad.svelte";
 </script>
