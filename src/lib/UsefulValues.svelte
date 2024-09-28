@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Alert, Heading, Li, List, P } from "flowbite-svelte";
+    import ValueOutputWithCopy from "./ValueOutputWithCopy.svelte";
 
     const values = [
         ["Your key","797762396669796332326D6F6465356961763978726C6464"],
@@ -14,12 +15,14 @@
 
     {#each values as value}
         <Heading tag="h6">{value[0]}</Heading>
-        <Alert>
-            {value[1].substring(0,48)}
-            {#if value[1].length > 48}
-            <br>
-                {value[1].substring(value[1].length-48)}
-            {/if}
-        </Alert>
+
+        {#if value[1].length > 48}
+
+        <ValueOutputWithCopy class="!py-2 !pr-2 !rounded-b-none" value={value[1].substring(0,48)} />
+        <ValueOutputWithCopy  class="!py-2 !pr-2 mt-[-1rem] !rounded-t-none" value={value[1].substring(value[1].length-48)} />
+        {:else}
+
+        <ValueOutputWithCopy value={value[1].substring(0,48)} />
+        {/if}
     {/each}
 </div>

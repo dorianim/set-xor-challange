@@ -1,47 +1,27 @@
-# Svelte + TS + Vite
+# SET XOR challenge
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+This is a simple challenge to demonstrate XOR encryption. Students get the following exercise:
 
-## Recommended IDE Setup
+> For the new semester, the TUM security office sends new login credentials to each student and staff member. Since these credentials are very sensitive, they are encrypted using a 24-Byte long pre shared key. Your key is (encoded as hexadecimal) `797762396669796332326D6F6465356961763978726C6464`. The message which contains your credentials is 48-bytes long. To Decrypt it, you need to split it in two 24-byte long halves and apply the bytwise xor opperator to each byte of the message and the key.
+> The message you got from the TUM security office is (encoded as hexadecimal):
+> ```
+> 301f105c46071c16575c4d351102540706055d1906090a44
+> 0a1e0c5d460e165200010c0d074a535f0f1f0d4e13045109
+> ```
+>
+> To decrypt this message, you need to use the bitwise xor operator to combine the ciphertext and key byte-by byte. For more information about the XOR cipher, see: https://en.wikipedia.org/wiki/XOR_cipher
+>
+> **Exercise one (2 points): Decrypt the message to find out your login credentials!**
+>
+> Due to a mailserver breach, some encrypted credentials, together with the corresponding email addresses, were leaked. You noticed, that this leak also contained the mail address of one of your professors. 
+> The leaked encrypted credentials of your professor are (encoded as hexadecimal):
+> ```
+> 26121516411a08000d0556321d06550811050055410a1f43
+> 1c13091741130b445f0d19014703471f0f1d0259030c1515
+> ```
+>
+> **Exercise two (8 points + 3 bonus points): Find out the key and credentials of your professor!**
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Purpose of this repo
 
-## Need an official Svelte framework?
-
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
-
-## Technical considerations
-
-**Why use this over SvelteKit?**
-
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+This repo contains a simple webapp which helps with hex/ascii conversion and xor calculation.

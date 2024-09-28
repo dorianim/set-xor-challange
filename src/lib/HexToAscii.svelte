@@ -2,6 +2,7 @@
     import { Alert, Button, Heading, Input, P } from "flowbite-svelte";
     import { bytesToHex, hexToBytes } from "./helpers";
     import {  ArrowUpDownOutline} from 'flowbite-svelte-icons';
+    import ValueOutputWithCopy from "./ValueOutputWithCopy.svelte";
 
 
     let input: string = '';
@@ -29,6 +30,6 @@
 
     <div class="grid lg:grid-cols-2 grid-cols-1 gap-3">
         <Input type="text" bind:value={input} placeholder={inputIsAscii ? "Enter ASCII here":"Enter HEX here"} />
-        <Alert class="!p-3">{output.length == 0 ? (inputIsAscii ? "HEX will show up here":"ASCII will show up here"):output}</Alert>
+        <ValueOutputWithCopy value={output} placeholder={inputIsAscii ? "HEX will show up here":"ASCII will show up here"}></ValueOutputWithCopy>
     </div>
 </div>

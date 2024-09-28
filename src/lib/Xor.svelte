@@ -3,6 +3,7 @@
     import {  ArrowUpDownOutline} from 'flowbite-svelte-icons';
 
     import { bytesToHex, hexToBytes } from "./helpers";
+    import ValueOutputWithCopy from "./ValueOutputWithCopy.svelte";
 
     let input1: string = '';
     let input2: string = '';
@@ -38,5 +39,5 @@
     </div>
 
 
-    <Alert class="!p-3">{output.length == 0 ? "Output will show up here":output}</Alert>
+    <ValueOutputWithCopy value={output} placeholder="Output will show up here"></ValueOutputWithCopy>
 </div>
