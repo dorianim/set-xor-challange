@@ -3,14 +3,14 @@
     import ValueOutputWithCopy from "./ValueOutputWithCopy.svelte";
 
     const values = [
-        ["Your key", "797762396669796332326D6F6465356961763978726C6464"],
+        ["Your key", "5a6935554b655a4a4b37696e353379584a397a32657071"],
         [
             "Your encrypted message",
-            "301f105c46071c16575c4d351102540706055d1906090a440a1e0c5d460e165200010c0d074a535f0f1f0d4e13045109",
+            "030640276b09352d2259490d47561d3d244d135309034b3d060c62331c20651f5f001d7c403a37384b1f51114a58",
         ],
         [
             "Leaked encrypted message",
-            "26121516411a08000d0556321d06550811050055410a1f431c13091741130b445f0d19014703471f0f1d0259030c1515",
+            "3d061001451f3c1e1a1a450e3b161036071701041e27770306514111063e562a1b102e3b1217380c07211153756c",
         ],
     ];
 </script>
@@ -28,14 +28,14 @@
         {#if value[1].length > 48}
             <ValueOutputWithCopy
                 class="!rounded-b-none z-20"
-                value={value[1].substring(0, 48)}
+                value={value[1].substring(0, 46)}
             />
             <ValueOutputWithCopy
                 class="mt-[-1rem] !rounded-t-none z-10"
-                value={value[1].substring(value[1].length - 48)}
+                value={value[1].substring(value[1].length - 46)}
             />
         {:else}
-            <ValueOutputWithCopy value={value[1].substring(0, 48)} />
+            <ValueOutputWithCopy value={value[1].substring(0, 46)} />
         {/if}
     {/each}
 </div>
